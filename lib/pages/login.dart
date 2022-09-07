@@ -68,12 +68,12 @@ class _FormLoginState extends State<FormLogin> {
                           children: [
                             const Text(
                               "Email",
-                              style: TextStyle(color: Colors.white),
+                              style: const TextStyle(color: Colors.white),
                             ),
                             const SizedBox(
                               height: 6.0,
                             ),
-                            FormdeDefault(height: 40.0, width: 286.0),
+                            const FormdeDefault(height: 40.0, width: 286.0),
                             // ButtonLogin(textButton: "Anak muda", )
                           ],
                         ),
