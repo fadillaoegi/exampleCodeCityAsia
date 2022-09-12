@@ -1,6 +1,7 @@
 import 'package:auth_account/widgets/widget_button.dart';
 import 'package:auth_account/widgets/widget_field.dart';
 import 'package:flutter/material.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 class PageOne extends StatelessWidget {
   const PageOne({
@@ -45,7 +46,10 @@ class PageOne extends StatelessWidget {
               ),
               ButtonDefault(
                 height: 40.0,
-                onPressed: (() {}),
+                onPressed: (() {
+                  GoogleSignIn().signOut();
+                  
+                }),
                 colorButton: Colors.redAccent,
                 textButton: "Log out",
               )

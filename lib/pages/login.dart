@@ -1,6 +1,7 @@
 import 'package:auth_account/pages/page_one.dart';
 import 'package:auth_account/widgets/widget_button.dart';
 import 'package:auth_account/widgets/widget_button_account.dart';
+import 'package:auth_account/widgets/widget_card.dart';
 import 'package:auth_account/widgets/widget_input_default.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -114,55 +115,6 @@ class _FormLoginState extends State<FormLogin> {
                         const SizedBox(
                           height: 20.0,
                         ),
-                        // ButtonAccount(
-                        //     imageUrl: "assets/google.png",
-                        //     name: "Login with google2",
-                        //     onPreesed: () async {
-                        //       //
-                        //       if (FirebaseAuth.instance.currentUser == null) {
-                        //         GoogleSignInAccount? account =
-                        //             await GoogleSignIn().signIn();
-                        //         if (account != null) {
-                        //           GoogleSignInAuthentication auth =
-                        //               await account.authentication;
-                        //           OAuthCredential credential =
-                        //               GoogleAuthProvider.credential(
-                        //                   accessToken: auth.accessToken,
-                        //                   idToken: auth.idToken);
-                        //           await FirebaseAuth.instance
-                        //               .signInWithCredential(credential);
-                        //         }
-                        //       }
-
-                        //       // Merubah Tulisan Tombol
-                        //       StreamBuilder<User?>(
-                        //         stream: FirebaseAuth.instance.userChanges(),
-                        //         builder: (context, snapshot) {
-                        //           if (snapshot.hasData) {
-                        //             return Text('Login with google2');
-                        //           } else {
-                        //             return const Text("SignOut");
-                        //           }
-                        //         },
-                        //       );
-                        //     }),
-                        // const SizedBox(
-                        //   height: 20.0,
-                        // ),
-                        // StreamBuilder<User?>(
-                        //   stream: FirebaseAuth.instance.userChanges(),
-                        //   builder: (context, snapshot) {
-                        //     if (snapshot.hasData) {
-                        //       return Text(
-                        //           'Sudah Login as ${FirebaseAuth.instance.currentUser!.displayName}(${FirebaseAuth.instance.currentUser!.email})');
-                        //     } else {
-                        //       return const Text("Belom Logiin");
-                        //     }
-                        //   },
-                        // ),
-                        // const SizedBox(
-                        //   height: 20.0,
-                        // ),
                         ButtonAccount(
                           imageUrl: "assets/instagram.png",
                           name: "Login with instag",
@@ -176,6 +128,10 @@ class _FormLoginState extends State<FormLogin> {
                           name: "Login with github",
                           onPreesed: () {},
                         ),
+                        const SizedBox(
+                          height: 20.0,
+                        ),
+                        CardDefault(height: 40, widht: 225)
                       ],
                     ),
                   ),
