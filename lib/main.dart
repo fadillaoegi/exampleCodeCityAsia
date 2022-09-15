@@ -39,7 +39,7 @@ class _MainAppState extends State<MainApp> {
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
       //
-      initialRoute: SplashScreen.routeName,
+      initialRoute: OnBoardingPage.routeName,
       routes: {
         SplashScreen.routeName : (context) => SplashScreen() ,
         OnBoardingPage.routeName : (context) => OnBoardingPage(),

@@ -77,7 +77,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
               ),
             )) ,
                const SizedBox(width: 100),
-                GestureDetector(
+                _pageIndex != 2 ? GestureDetector(
                   onTap: (){
                     _pageController.nextPage(duration: Duration(microseconds: 500), curve: Curves.easeIn);
                   },
@@ -91,7 +91,21 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                     ),
                     child: Icon(Icons.arrow_forward, color: Colors.white,),
                   ),
-                ),
+                ) : GestureDetector(
+                  onTap: (){
+                      Navigator.pushReplacementNamed(context, FormLogin.routeName) ;
+                  },
+                  child: Container(
+                    margin: EdgeInsets.only(bottom: 20, right: 20),
+                    height: 60,
+                    width: 120,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50) ,
+                        color: Color(0xffF54291)
+                    ),
+                    child: Center(child: Text('Get Started' , style: detailOnBoard.copyWith(color: Colors.white),)),
+                  ),
+                )
               ],
             )
           ],
