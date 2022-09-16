@@ -16,6 +16,8 @@ GoogleSignIn _googleSignIn = GoogleSignIn(
 class FormLogin extends StatefulWidget {
   const FormLogin({Key? key}) : super(key: key);
 
+  static const routeName = '/login' ;
+
   @override
   State<FormLogin> createState() => _FormLoginState();
 }
