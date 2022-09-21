@@ -16,7 +16,7 @@ GoogleSignIn _googleSignIn = GoogleSignIn(
 class FormLogin extends StatefulWidget {
   const FormLogin({Key? key}) : super(key: key);
 
-  static const routeName = '/login' ;
+  static const routeName = '/login';
 
   @override
   State<FormLogin> createState() => _FormLoginState();
@@ -50,13 +50,13 @@ class _FormLoginState extends State<FormLogin> {
       body: SafeArea(
         child: _currentUser == null
             ? Container(
-                color: const Color(0xff7F95CE),
+                color: Color.fromARGB(255, 189, 73, 156),
                 child: ListView(children: [
                   Center(
                     child: Column(
                       children: <Widget>[
                         const Padding(padding: EdgeInsets.only(top: 40.0)),
-                        const Text("Authentication Google",
+                        const Text("Authentication",
                             style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 20.0,
@@ -102,7 +102,7 @@ class _FormLoginState extends State<FormLogin> {
                         ButtonDefault(
                           height: 32.0,
                           width: 77.0,
-                          colorButton: const Color(0xffA1BBE1),
+                          colorButton: Color.fromARGB(255, 207, 133, 236),
                           onPressed: (() => debugPrint("Testiiing")),
                           textButton: "Login",
                         ),
@@ -133,7 +133,7 @@ class _FormLoginState extends State<FormLogin> {
                         const SizedBox(
                           height: 20.0,
                         ),
-                        CardDefault(height: 40, widht: 225)
+                        // CardDefault(height: 40, widht: 225)
                       ],
                     ),
                   ),
