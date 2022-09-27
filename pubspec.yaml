@@ -38,6 +38,9 @@ dependencies:
   # firebase_core: ^1.21.1n
   google_fonts: ^3.0.1
   shared_preferences: ^2.0.14
+  flutter_bloc: ^8.1.1
+  equatable: ^2.0.5
+  http: ^0.13.5
 
 dev_dependencies:
   flutter_test:
