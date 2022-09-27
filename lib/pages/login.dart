@@ -1,3 +1,4 @@
+import 'package:auth_account/pages/list_food.dart';
 import 'package:auth_account/pages/page_one.dart';
 import 'package:auth_account/widgets/widget_button.dart';
 import 'package:auth_account/widgets/widget_button_account.dart';
@@ -68,15 +69,15 @@ class _FormLoginState extends State<FormLogin> {
                         ),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const Text(
+                          children: const [
+                            Text(
                               "Email",
                               style: const TextStyle(color: Colors.white),
                             ),
-                            const SizedBox(
+                            SizedBox(
                               height: 6.0,
                             ),
-                            const FormdeDefault(height: 40.0, width: 286.0),
+                            FormdeDefault(height: 40.0, width: 286.0),
                             // ButtonLogin(textButton: "Anak muda", )
                           ],
                         ),
@@ -85,12 +86,12 @@ class _FormLoginState extends State<FormLogin> {
                         ),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const Text(
+                          children: const [
+                            Text(
                               "Password",
                               style: TextStyle(color: Colors.white),
                             ),
-                            const SizedBox(
+                            SizedBox(
                               height: 6.0,
                             ),
                             FormdeDefault(height: 40.0, width: 286.0),
@@ -120,7 +121,10 @@ class _FormLoginState extends State<FormLogin> {
                         ButtonAccount(
                           imageUrl: "assets/instagram.png",
                           name: "Login with instag",
-                          onPreesed: () {},
+                          onPreesed: () {
+                            Navigator.pushNamed(
+                                context, ListRecipePage.routename);
+                          },
                         ),
                         const SizedBox(
                           height: 20.0,

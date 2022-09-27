@@ -46,7 +46,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                   child: Text(
                     'Lewati',
                     style: detailOnBoard.copyWith(
-                        color: Color(0xff78145C), fontWeight: FontWeight.bold),
+                        color: primaryColor, fontWeight: FontWeight.bold),
                   ),
                 ),
               ),
@@ -95,7 +95,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(50),
                               color: Color(0xffF54291)),
-                          child: Icon(
+                          child: const Icon(
                             Icons.arrow_forward,
                             color: Colors.white,
                           ),
@@ -113,6 +113,54 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(50),
                               color: Color(0xffF54291)),
+                          child: Center(
+                              child: Text(
+                            'Get Started',
+                            style: detailOnBoard.copyWith(color: Colors.white),
+                          )),
+                        ),
+                      ),
+                ...List.generate(
+                    dataOnboarding.length,
+                    (index) => Padding(
+                          padding: EdgeInsets.only(right: 5),
+                          child: DotIndicator(
+                            isActive: index == _pageIndex,
+                          ),
+                        )),
+                const SizedBox(width: 100),
+                _pageIndex != 2
+                    ? GestureDetector(
+                        onTap: () {
+                          _pageController.nextPage(
+                              duration: Duration(microseconds: 500),
+                              curve: Curves.easeIn);
+                        },
+                        child: Container(
+                          margin: EdgeInsets.only(bottom: 20, right: 20),
+                          height: 60,
+                          width: 60,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(50),
+                              color: primaryColor),
+                          child: Icon(
+                            Icons.arrow_forward,
+                            color: Colors.white,
+                          ),
+                        ),
+                      )
+                    : GestureDetector(
+                        onTap: () {
+                          Navigator.pushReplacementNamed(
+                              context, FormLogin.routeName);
+                        },
+                        child: Container(
+                          margin: EdgeInsets.only(bottom: 20, right: 20),
+                          height: 60,
+                          width: 120,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(50),
+                              color: primaryColor),
                           child: Center(
                               child: Text(
                             'Get Started',
@@ -140,11 +188,13 @@ class DotIndicator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 6,
-      width: isActive ? 15 : 6,
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10), color: Color(0xffF54291)),
-    );
+        height: 6,
+        width: isActive ? 15 : 6,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          color: const Color(0xffF54291),
+        ),
+        color: primaryColor);
   }
 }
 
