@@ -1,3 +1,4 @@
+import 'package:auth_account/pages/list_food.dart';
 import 'package:auth_account/pages/login.dart';
 import 'package:auth_account/pages/onBoard.dart';
 import 'package:auth_account/pages/splashscreen.dart';
@@ -41,7 +42,8 @@ class _MainAppState extends State<MainApp> {
       routes: {
         SplashScreen.routeName: (context) => SplashScreen(),
         OnBoardingPage.routeName: (context) => OnBoardingPage(),
-        FormLogin.routeName: (context) => FormLogin()
+        FormLogin.routeName: (context) => FormLogin(),
+        ListRecipePage.routename : (context) => ListRecipePage() ,
       },
     );
   }

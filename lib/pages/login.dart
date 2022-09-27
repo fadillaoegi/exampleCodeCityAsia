@@ -1,3 +1,4 @@
+import 'package:auth_account/pages/list_food.dart';
 import 'package:auth_account/pages/page_one.dart';
 import 'package:auth_account/widgets/widget_button.dart';
 import 'package:auth_account/widgets/widget_button_account.dart';
@@ -120,7 +121,9 @@ class _FormLoginState extends State<FormLogin> {
                         ButtonAccount(
                           imageUrl: "assets/instagram.png",
                           name: "Login with instag",
-                          onPreesed: () {},
+                          onPreesed: () {
+                            Navigator.pushNamed(context, ListRecipePage.routename) ;
+                          },
                         ),
                         const SizedBox(
                           height: 20.0,
