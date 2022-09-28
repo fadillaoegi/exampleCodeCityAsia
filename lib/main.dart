@@ -42,8 +42,8 @@ class _MainAppState extends State<MainApp> {
       routes: {
         SplashScreen.routeName: (context) => SplashScreen(),
         OnBoardingPage.routeName: (context) => OnBoardingPage(),
-        FormLogin.routeName: (context) => FormLogin(),
-        ListRecipePage.routename : (context) => ListRecipePage() ,
+        FormLogin.routeName: (context) => const FormLogin(),
+        ListRecipePage.routename : (context) => const ListRecipePage() ,
       },
     );
   }
