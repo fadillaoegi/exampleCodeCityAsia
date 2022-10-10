@@ -46,12 +46,14 @@ class _MainAppState extends State<MainApp> {
       routes: {
         SplashScreen.routeName: (context) => SplashScreen(),
         OnBoardingPage.routeName: (context) => OnBoardingPage(),
-        FormLogin.routeName: (context) => FormLogin(),
-        ListRecipePage.routename : (context) => ListRecipePage() ,
-        PageOne.routeName : (context) => PageOne() ,
-        ScheduleScreen.routeName : (context) => ScheduleScreen() ,
-        BerandaScreen.routeName : (context) => BerandaScreen() ,
-        Home.routeName : (context) => Home() ,
+        FormLogin.routeName: (context) => const FormLogin(),
+        ListRecipePage.routename: (context) => const ListRecipePage(),
+        FormLogin.routeName: (context) => const FormLogin(),
+        ListRecipePage.routename: (context) => ListRecipePage(),
+        PageOne.routeName: (context) => const PageOne(),
+        ScheduleScreen.routeName: (context) => ScheduleScreen(),
+        BerandaScreen.routeName: (context) => BerandaScreen(),
+        Home.routeName: (context) => const Home(),
       },
     );
   }
