@@ -70,15 +70,15 @@ class _FormLoginState extends State<FormLogin> {
                         ),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const Text(
+                          children: const [
+                            Text(
                               "Email",
                               style: const TextStyle(color: Colors.white),
                             ),
-                            const SizedBox(
+                            SizedBox(
                               height: 6.0,
                             ),
-                            const FormdeDefault(height: 40.0, width: 286.0),
+                            FormdeDefault(height: 40.0, width: 286.0),
                             // ButtonLogin(textButton: "Anak muda", )
                           ],
                         ),
@@ -87,12 +87,12 @@ class _FormLoginState extends State<FormLogin> {
                         ),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const Text(
+                          children: const [
+                            Text(
                               "Password",
                               style: TextStyle(color: Colors.white),
                             ),
-                            const SizedBox(
+                            SizedBox(
                               height: 6.0,
                             ),
                             FormdeDefault(height: 40.0, width: 286.0),
@@ -124,6 +124,9 @@ class _FormLoginState extends State<FormLogin> {
                           name: "Login with instag",
                           onPreesed: () {
                            Navigator.pushReplacementNamed(context, Home.routeName);
+
+                            Navigator.pushNamed(
+                                context, ListRecipePage.routename);
                           },
                         ),
                         const SizedBox(

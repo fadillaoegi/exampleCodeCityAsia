@@ -11,13 +11,13 @@ class OnBoardingPage extends StatefulWidget {
 }
 
 class _OnBoardingPageState extends State<OnBoardingPage> {
-  late PageController _pageController ;
-  late int _pageIndex ;
+  late PageController _pageController;
+  late int _pageIndex;
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    _pageController = PageController(initialPage: 0) ;
+    _pageController = PageController(initialPage: 0);
     _pageIndex = 0;
   }
 
@@ -25,7 +25,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
   void dispose() {
     // TODO: implement dispose
     super.dispose();
-    _pageController.dispose() ;
+    _pageController.dispose();
   }
 
   @override
@@ -35,12 +35,13 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
         child: Column(
           children: [
             Padding(
-              padding: EdgeInsets.only(top: 20 , right: 20 , bottom: 20),
+              padding: EdgeInsets.only(top: 20, right: 20, bottom: 20),
               child: Align(
                 alignment: Alignment.topRight,
                 child: GestureDetector(
                   onTap: () {
-                    Navigator.pushReplacementNamed(context, FormLogin.routeName) ;
+                    Navigator.pushReplacementNamed(
+                        context, FormLogin.routeName);
                   },
                   child: Text(
                     'Lewati',
@@ -53,9 +54,9 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
             Expanded(
               child: PageView.builder(
                 controller: _pageController,
-                onPageChanged: (index){
+                onPageChanged: (index) {
                   setState(() {
-                    _pageIndex = index ;
+                    _pageIndex = index;
                   });
                 },
                 itemCount: dataOnboarding.length,
@@ -63,49 +64,110 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                   return BuildContentOnBoard(
                     imageUrl: dataOnboarding[index].imageUrl,
                     title: dataOnboarding[index].title,
-                    detail:  dataOnboarding[index].detail,);
+                    detail: dataOnboarding[index].detail,
+                  );
                 },
               ),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                ...List.generate(dataOnboarding.length, (index) => Padding(
-              padding: EdgeInsets.only(right: 5),
-              child: DotIndicator(
-                isActive: index == _pageIndex ,
-              ),
-            )) ,
-               const SizedBox(width: 100),
-                _pageIndex != 2 ? GestureDetector(
-                  onTap: (){
-                    _pageController.nextPage(duration: Duration(microseconds: 500), curve: Curves.easeIn);
-                  },
-                  child: Container(
-                    margin: EdgeInsets.only(bottom: 20, right: 20),
-                    height: 60,
-                    width: 60,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(50) ,
-                      color: primaryColor
-                    ),
-                    child: Icon(Icons.arrow_forward, color: Colors.white,),
-                  ),
-                ) : GestureDetector(
-                  onTap: (){
-                      Navigator.pushReplacementNamed(context, FormLogin.routeName) ;
-                  },
-                  child: Container(
-                    margin: EdgeInsets.only(bottom: 20, right: 20),
-                    height: 60,
-                    width: 120,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(50) ,
-                        color: primaryColor
-                    ),
-                    child: Center(child: Text('Get Started' , style: detailOnBoard.copyWith(color: Colors.white),)),
-                  ),
-                )
+                ...List.generate(
+                    dataOnboarding.length,
+                    (index) => Padding(
+                          padding: EdgeInsets.only(right: 5),
+                          child: DotIndicator(
+                            isActive: index == _pageIndex,
+                          ),
+                        )),
+                const SizedBox(width: 100),
+                _pageIndex != 2
+                    ? GestureDetector(
+                        onTap: () {
+                          _pageController.nextPage(
+                              duration: Duration(microseconds: 500),
+                              curve: Curves.easeIn);
+                        },
+                        child: Container(
+                          margin: EdgeInsets.only(bottom: 20, right: 20),
+                          height: 60,
+                          width: 60,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(50),
+                              color: Color(0xffF54291)),
+                          child: const Icon(
+                            Icons.arrow_forward,
+                            color: Colors.white,
+                          ),
+                        ),
+                      )
+                    : GestureDetector(
+                        onTap: () {
+                          Navigator.pushReplacementNamed(
+                              context, FormLogin.routeName);
+                        },
+                        child: Container(
+                          margin: EdgeInsets.only(bottom: 20, right: 20),
+                          height: 60,
+                          width: 120,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(50),
+                              color: Color(0xffF54291)),
+                          child: Center(
+                              child: Text(
+                            'Get Started',
+                            style: detailOnBoard.copyWith(color: Colors.white),
+                          )),
+                        ),
+                      ),
+                ...List.generate(
+                    dataOnboarding.length,
+                    (index) => Padding(
+                          padding: EdgeInsets.only(right: 5),
+                          child: DotIndicator(
+                            isActive: index == _pageIndex,
+                          ),
+                        )),
+                const SizedBox(width: 100),
+                _pageIndex != 2
+                    ? GestureDetector(
+                        onTap: () {
+                          _pageController.nextPage(
+                              duration: Duration(microseconds: 500),
+                              curve: Curves.easeIn);
+                        },
+                        child: Container(
+                          margin: EdgeInsets.only(bottom: 20, right: 20),
+                          height: 60,
+                          width: 60,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(50),
+                              color: primaryColor),
+                          child: Icon(
+                            Icons.arrow_forward,
+                            color: Colors.white,
+                          ),
+                        ),
+                      )
+                    : GestureDetector(
+                        onTap: () {
+                          Navigator.pushReplacementNamed(
+                              context, FormLogin.routeName);
+                        },
+                        child: Container(
+                          margin: EdgeInsets.only(bottom: 20, right: 20),
+                          height: 60,
+                          width: 120,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(50),
+                              color: primaryColor),
+                          child: Center(
+                              child: Text(
+                            'Get Started',
+                            style: detailOnBoard.copyWith(color: Colors.white),
+                          )),
+                        ),
+                      )
               ],
             )
           ],
@@ -117,39 +179,43 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
 
 class DotIndicator extends StatelessWidget {
   const DotIndicator({
-    Key? key,  this.isActive  = false ,
+    Key? key,
+    this.isActive = false,
   }) : super(key: key);
 
-  final bool isActive ;
+  final bool isActive;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 6,
-      width: isActive ? 15 : 6,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
-        color: primaryColor
-      ),
-    );
+        height: 6,
+        width: isActive ? 15 : 6,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          color: const Color(0xffF54291),
+        ),
+        color: primaryColor);
   }
 }
 
 class BuildContentOnBoard extends StatelessWidget {
-   final String imageUrl ;
-   final String title  ;
-   final String detail ;
+  final String imageUrl;
+  final String title;
+  final String detail;
 
-  const BuildContentOnBoard({super.key,
-   required this.imageUrl,
-   required this.title,
-   required this.detail});
+  const BuildContentOnBoard(
+      {super.key,
+      required this.imageUrl,
+      required this.title,
+      required this.detail});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Image.asset(imageUrl,),
+        Image.asset(
+          imageUrl,
+        ),
         const SizedBox(
           height: 50,
         ),
@@ -161,7 +227,7 @@ class BuildContentOnBoard extends StatelessWidget {
           height: 18,
         ),
         Text(
-         detail,
+          detail,
           textAlign: TextAlign.center,
           style: detailOnBoard,
         ),
