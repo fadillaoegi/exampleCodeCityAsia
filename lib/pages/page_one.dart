@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 class PageOne extends StatelessWidget {
+  static const routeName = '/page-one-screen' ;
+
   const PageOne({
     Key? key,
     this.data,

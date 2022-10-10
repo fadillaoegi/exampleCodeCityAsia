@@ -1,6 +1,10 @@
+import 'package:auth_account/pages/beranda_screen.dart';
+import 'package:auth_account/pages/schedule_screen.dart';
+import 'package:auth_account/pages/home.dart';
 import 'package:auth_account/pages/list_food.dart';
 import 'package:auth_account/pages/login.dart';
 import 'package:auth_account/pages/onBoard.dart';
+import 'package:auth_account/pages/page_one.dart';
 import 'package:auth_account/pages/splashscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -44,6 +48,10 @@ class _MainAppState extends State<MainApp> {
         OnBoardingPage.routeName: (context) => OnBoardingPage(),
         FormLogin.routeName: (context) => FormLogin(),
         ListRecipePage.routename : (context) => ListRecipePage() ,
+        PageOne.routeName : (context) => PageOne() ,
+        ScheduleScreen.routeName : (context) => ScheduleScreen() ,
+        BerandaScreen.routeName : (context) => BerandaScreen() ,
+        Home.routeName : (context) => Home() ,
       },
     );
   }
