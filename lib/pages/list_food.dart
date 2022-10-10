@@ -12,14 +12,9 @@ class ListRecipePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Recipe App'),
-      ),
-      body: RepositoryProvider(
-          create: (context) => RecipeRepositories() ,
-          child: ListPage(),
-      ),
+    return RepositoryProvider(
+      create: (context) => RecipeRepositories() ,
+      child: ListPage(),
     );
   }
 }
