@@ -35,3 +35,7 @@ TextStyle priceItemCard = GoogleFonts.inter().copyWith(
     color: Color(0xff181A1B), fontWeight: FontWeight.w600 , fontSize: 12
 ) ;
 const edge = 20.0 ;
+
+TextStyle ojkTitle = GoogleFonts.inter().copyWith(
+  color: Color(0xff181A1B) , fontWeight: FontWeight.w500 , fontStyle: FontStyle.normal , fontSize: 14 ,
+) ;

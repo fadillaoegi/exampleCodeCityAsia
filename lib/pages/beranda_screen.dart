@@ -71,5 +71,4 @@ class BerandaScreen extends StatelessWidget {
       ),
     ));
   }
-
 }
